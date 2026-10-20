@@ -266,7 +266,7 @@ class AppImage extends StatelessWidget {
           if (kIsWeb) {
             return DecorationImage(
               image: fallbackAsset.isNotEmpty
-                  ? AssetImage(fallbackAsset, package: 'extensionresoft')
+                  ? AssetImage(fallbackAsset, package: 'any_source_image')
                   : NetworkImage(defaultFallbackNetworkImage) as ImageProvider,
               fit: actualFit,
               alignment: alignment,
@@ -295,7 +295,7 @@ class AppImage extends StatelessWidget {
           // Use provided fallback
           if (fallbackAsset.isNotEmpty) {
             return DecorationImage(
-              image: AssetImage(fallbackAsset, package: 'extensionresoft'),
+              image: AssetImage(fallbackAsset, package: 'any_source_image'),
               fit: actualFit,
               alignment: alignment,
               colorFilter: colorFilter,
@@ -317,7 +317,7 @@ class AppImage extends StatelessWidget {
 
       return DecorationImage(
         image: fallbackAsset.isNotEmpty
-            ? AssetImage(fallbackAsset, package: 'extensionresoft') as ImageProvider
+            ? AssetImage(fallbackAsset, package: 'any_source_image') as ImageProvider
             : (kIsWeb
                   ? NetworkImage(defaultFallbackNetworkImage) as ImageProvider
                   : CachedNetworkImageProvider(defaultFallbackNetworkImage)),
