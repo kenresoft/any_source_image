@@ -49,6 +49,33 @@ any other type shows the fallback.
 `img()` loads the string as an asset first and falls back to `AppImage` if that
 fails, so it also works for URLs.
 
+## Migrating from extensionresoft 1.x
+
+`extensionresoft` 2.0.0 no longer contains these classes. If your app used
+`AppImage`, `AppCircleImage`, `ImageSourceType`, `ImageBackground`, or the
+`'path'.img()` and `circleImage()` helpers on `String`:
+
+1. Add the package:
+
+   ```yaml
+   dependencies:
+     extensionresoft: ^2.0.0
+     any_source_image: ^1.0.0
+   ```
+
+2. Change the import in every file that uses them:
+
+   ```dart
+   // before
+   import 'package:extensionresoft/extensionresoft.dart';
+   // after
+   import 'package:any_source_image/any_source_image.dart';
+   ```
+
+The API is unchanged, so no other code needs to change. Keep the
+`extensionresoft` import in files that also use its other features. If you stay
+on `extensionresoft ^1.5.1` you do not need this package.
+
 ## Notes
 
 - `ImageBackground.circle` is experimental: the original code marks its edge cases as still being tested.
