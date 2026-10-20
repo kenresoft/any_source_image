@@ -1,0 +1,25 @@
+name: any_source_image
+description: "One image widget for any source: a network URL (cached), an asset path or a File. With placeholder, fallback and error handling, a circular avatar, and a background widget."
+version: 1.0.0
+repository: https://github.com/kenresoft/any_source_image
+issue_tracker: https://github.com/kenresoft/any_source_image/issues
+topics:
+  - image
+  - cache
+  - avatar
+  - network-image
+  - widgets
+
+environment:
+  sdk: '>=3.8.1 <4.0.0'
+  flutter: ">=3.22.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cached_network_image: ^3.4.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
